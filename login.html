@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="css/login.css" />
+  </head>
+  <body>
+    <div class="page">
+      <!-- Login card -->
+      <div class="login-card">
+        <!-- Change the action value later when we incorporate passwords-->
+        <form class="login-form" action="#" method="post">
+          <h1 class="login-title">Login</h1>
+
+          <!-- Username text prompt -->
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" required />
+
+          <!-- Password text prompt -->
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required />
+
+          <button type="submit" class="login-button">Login</button>
+
+          <!-- Register link -->
+          <p class="register-text">
+            Need an account? <a href="register.html">Register</a>
+          </p>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
