@@ -2,6 +2,7 @@
   box-sizing: border-box;
 }
 
+/* Delete from here */
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -9,6 +10,7 @@ body {
   color: #000;
   background: #fff;
 }
+/* to here */
 
 .page {
   min-height: 100vh;
@@ -39,7 +41,7 @@ body {
   line-height: 1.2;
 }
 
-label {
+.label-login {
   display: block;
   margin: 0;
   line-height: 1.2;
@@ -49,6 +51,7 @@ label {
   margin-top: 0;
 }
 
+/* Delete from here */
 input[type="text"],
 input[type="password"] {
   width: 100%;
@@ -66,6 +69,7 @@ input[type="password"]:focus {
   border-color: #2970ec;
   box-shadow: 0 0 0 2px rgba(41, 112, 236, 0.2);
 }
+/* to here */
 
 .login-button {
   width: 100%;
