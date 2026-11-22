@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="reg-log-page">
+    <!-- Change the action value later when we incorporate passwords -->
+    <form class="reg-log-card" id="login-form">
+      <h1><b>Login</b></h1>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" autocomplete="email" required />
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" autocomplete="current-password" required />
+
+      <button type="submit">Login</button>
+      <p id="auth-message" role="status" aria-live="polite"></p>
+
+      <p class="reg-log">
+        Need an account? <a href="Register.html">Register</a>
+      </p>
+    </form>
+    <script src="js/auth.js"></script>
+  </body>
+</html>
