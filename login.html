@@ -8,23 +8,22 @@
   </head>
   <body class="reg-log-page">
     <!-- Change the action value later when we incorporate passwords -->
-    <form class="reg-log-card" action="#" method="post">
+    <form class="reg-log-card" id="login-form">
       <h1><b>Login</b></h1>
 
-      <!-- Username text prompt -->
-      <label for="username">Username</label>
-      <input type="text" id="username" name="username" required />
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" autocomplete="email" required />
 
-      <!-- Password text prompt -->
       <label for="password">Password</label>
-      <input type="password" id="password" name="password" required />
+      <input type="password" id="password" name="password" autocomplete="current-password" required />
 
       <button type="submit">Login</button>
+      <p id="auth-message" role="status" aria-live="polite"></p>
 
-      <!-- Register link -->
       <p class="reg-log">
-        Need an account? <a href="register.html">Register</a>
+        Need an account? <a href="Register.html">Register</a>
       </p>
     </form>
+    <script src="js/auth.js"></script>
   </body>
 </html>
