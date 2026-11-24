@@ -95,7 +95,7 @@ router.post('/register', async (req, res) => {
             });
         }
 
-        console.error('Registration error:', error.message);
+        req.log.error({ err: error }, 'Registration error');
 
         return res.status(500).json({
             message: 'Server error during registration.'
@@ -159,8 +159,7 @@ router.post('/login', async (req, res) => {
         // Regenerate session after successful login
         req.session.regenerate((error) => {
             if (error) {
-                console.error('Session error:', error.message);
-
+                req.log.error({ err: error }, 'Session error');
                 return res.status(500).json({
                     message: 'Unable to create login session.'
                 });
@@ -174,7 +173,7 @@ router.post('/login', async (req, res) => {
 
             req.session.save((saveError) => {
                 if (saveError) {
-                    console.error('Session save error:', saveError.message);
+                    req.log.error({ err: saveError }, 'Session save error');
 
                     return res.status(500).json({
                         message: 'Unable to save login session.'
@@ -189,7 +188,7 @@ router.post('/login', async (req, res) => {
         });
 
     } catch (error) {
-        console.error('Login error:', error.message);
+        req.log.error({ err: error }, 'Login error');
 
         return res.status(500).json({
             message: 'Server error during login.'
